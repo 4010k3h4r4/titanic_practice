@@ -14,7 +14,7 @@ def data_loader(use_cols):
     drop_cols = ['PassengerId', 'Name', 'Survived']
     target_col = ['Survived']
     cat_cols = ['Sex', 'Ticket', 'Cabin', 'Embarked']
-    cont_cols = list(set(cols) - set(drop_cols) -set(cat_cols))
+    cont_cols = list(set(cols) - set(drop_cols) -　set(cat_cols))
 
     # data import
     raw = pd.read_csv('train.csv')
@@ -39,7 +39,7 @@ def data_loader(use_cols):
 
 
 if __name__ == "__main__":
-    #
+    # データを共有できるように保存
     x, y = data_loader()
     data = [x, y]
     filenames = ['train_feature.pkl', 'train_target.pkl']
